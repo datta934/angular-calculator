@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-md-4 offset-4">
       <div class="base">
@@ -32,5 +32,49 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <router-outlet></router-outlet>
+
+<div class="row">
+  <div class="col-4 col"></div>
+  <div class="col-4 col">
+    Simple Calculator
+    <div class="card">
+      <div class="row" style="width: 100%;">
+        <div class="maindisplay background-secondary col col-12 text-right">
+          <div class="subdisplay">{{subText}}</div>
+          {{mainText}}
+        </div>
+      </div>
+      <div class="row flex-center" style="width: 100%;">
+        <a class="col-2 col paper-btn text-center margin btn-warning" (click)="allClear()">AC</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('.')">.</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('/')">/</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('%')">%</a>
+      </div>
+      <div class="row flex-center" style="width: 100%;">
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('7')">7</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('8')">8</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('9')">9</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('x')">X</a>
+      </div>
+      <div class="row flex-center" style="width: 100%;">
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('4')">4</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('5')">5</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('6')">6</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('+')">+</a>
+      </div>
+      <div class="row flex-center" style="width: 100%;">
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('1')">1</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('2')">2</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('3')">3</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="pressKey('-')">-</a>
+      </div>
+      <div class="row flex-center" style="width: 100%;">
+        <a class="col-6 col paper-btn text-center margin" (click)="pressKey('0')">0</a>
+        <a class="col-2 col paper-btn text-center margin" (click)="getAnswer()">=</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 col"></div>
+</div>
